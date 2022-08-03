@@ -1,0 +1,8 @@
+roles:
+  - name: geerlingguy.firewall
+
+collections:
+  - name: ansible.posix
+  - name: community.crypto
+  - name: community.general
+  - name: kubernetes.core
