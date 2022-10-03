@@ -1,0 +1,35 @@
+---
+ansible_user                 : ubuntu
+ansible_ssh_private_key_file : ~/.ssh/id_rsa
+
+firewall_allowed_tcp_ports   :
+  - "22"
+  - "443"
+  - "80"
+  - "3306"
+  - "4443"
+  - "5601"
+  - "6443"
+  - "8443"
+  - "9000:10000"
+  - "8080:8081"
+  - "2379:2380"
+  - "30000:32767"
+  - "10248:10260"
+
+kube_version: v1.23.7
+
+minimal_node_memory_mb: 900
+minimal_master_memory_mb: 900
+
+dashboard_namespace: "kube-dashboard"
+dashboard_enabled: true
+metrics_server_enabled: true
+ingress_nginx_enabled: true
+kube_network_plugin: flannel
+kubectl_localhost: true
+kubeconfig_localhost: true
+cert_manager_enabled: true
+cert_management: script
+
+artifacts_dir: ~/.kube/
